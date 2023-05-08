@@ -11,8 +11,8 @@ from mpc_tracking_controller import MPCDiffDriveControl
 class MPCControl():
     def __init__(self, delta_t, min_error):
         print("Initializing the MPC controller")
-        self.pub_velocity = rospy.Publisher('/husky_velocity_controller/cmd_vel', Twist, queue_size=10)
-        rospy.Subscriber('/odometry/filtered', Odometry, self.set_pose)
+        self.pub_velocity = rospy.Publisher('/jackal0/jackal_velocity_controller/cmd_vel', Twist, queue_size=10)
+        rospy.Subscriber('/jackal0/odometry/local_filtered', Odometry, self.set_pose)
         self.i = 0
         self.set_q_init = None
         self.q = None 

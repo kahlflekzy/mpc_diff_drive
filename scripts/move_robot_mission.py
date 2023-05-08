@@ -42,7 +42,7 @@ class MoveRobot():
 if __name__ == '__main__':
     rospy.init_node('husky_planner_mission')
     try:
-        target_pose = np.array([5,5, np.pi/4])
+        target_pose = np.array([2, 2, 0])
         husky_mission = MoveRobot()
         husky_mission.execute_mission(target_pose)
     except rospy.ROSInterruptException:

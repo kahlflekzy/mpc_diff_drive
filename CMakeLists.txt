@@ -32,12 +32,12 @@ generate_messages(
 )
 
 catkin_package(
-    INCLUDE_DIRS include
-    LIBRARIES nav_husky_robot
-    CATKIN_DEPENDS  std_msgs nav_msgs tf rospy actionlib_msgs message_generation geometry_msgs 
-                    tf2_ros tf2_geometry_msgs visualization_msgs
-    DEPENDS system_lib
-    DEPENDS message_runtime                
+    # INCLUDE_DIRS include
+    # LIBRARIES nav_husky_robot
+    # CATKIN_DEPENDS  std_msgs nav_msgs tf rospy actionlib_msgs message_generation geometry_msgs 
+    #                 tf2_ros tf2_geometry_msgs visualization_msgs
+    # DEPENDS system_lib
+    # DEPENDS message_runtime                
 )
 
 include_directories(
@@ -49,4 +49,3 @@ include_directories(
 
 add_executable(nav_husky_robot_node src/path_sampling.cpp)
 target_link_libraries(nav_husky_robot_node ${catkin_LIBRARIES})
-

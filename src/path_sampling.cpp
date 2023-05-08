@@ -16,7 +16,7 @@ private:
 public:
   PathSampling(ros::NodeHandle &nh): nh_(nh)
   {
-    robot_odom_ = nh_.subscribe<nav_msgs::Odometry>("/odometry/filtered"
+    robot_odom_ = nh_.subscribe<nav_msgs::Odometry>("/jackal0/odometry/local_filtered"
                                 , 5, &PathSampling::odomCallback, this);
     traversed_path_pub_ = nh_.advertise<nav_msgs::Path>("/husky/traversed_path", 20);
     last_time_ = ros::Time::now();
