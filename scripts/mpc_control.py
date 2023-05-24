@@ -73,7 +73,7 @@ class MPCControl():
         self.odom_pose = np.array([msg.pose.pose.position.x, msg.pose.pose.position.y, yaw])
     
     def mpc_planner_init(self, target_pose):
-        self.mpc_solver = MPCDiffDriveControl(self.Ts, 20, 0.2)
+        self.mpc_solver = MPCDiffDriveControl(self.Ts, 20, 0.1)
         self.target_pose = target_pose
         if(self.q is None):
             print("Still robot current pose is not set")
